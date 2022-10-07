@@ -17,10 +17,18 @@
     --red: #CF3C3F;
 }
 
-.login-screen {
+main {
     display: flex;
     width: 100%;
     min-height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .login {
@@ -31,16 +39,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    width: 180px;
-    margin-bottom: 60px;
+    width: 130px;
+    margin-bottom: 20%;
 }
 
 h1 {
     font-size: 1.8rem;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .inputs {
@@ -51,11 +61,15 @@ h1 {
     display: block;
     margin-bottom: 20px;
     width: 100%;
+    height: 65px;
 }
 
 .inputs > label > .span-active {
     font-size: 0.7em;
     margin: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inputs span {
@@ -67,7 +81,6 @@ h1 {
     margin: 20px;
     cursor: text;
     transition: all 200ms ease;
-
 }
 
 .inputs input {
@@ -76,7 +89,8 @@ h1 {
     border: none;
     border: 2px solid rgba(0, 0, 0, 0);
     border-radius: 5px;
-    font-size: 0.9em;
+    font-size: 1em;
+    font-weight: 700;
     padding: 25px 10px 10px;
     font-weight: 600;
 }
@@ -84,6 +98,168 @@ h1 {
 .inputs input:focus {
     background-color: var(--whitesmoke);
     border: 2px solid var(--deep-grey);
+}
+
+.visibility-div {
+    position: relative;
+    float: right;
+    padding: 0 20px;
+    margin-top: -65px;
+    cursor: pointer;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.btn {
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.buttons img {
+    height: 100%;
+}
+
+.buttons .btn:nth-child(1) {
+    background-color: var(--blue);
+    padding: 8px;
+}
+
+.buttons .btn:nth-child(1):hover {
+    background-color: #1867cf;
+    padding: 8px;
+}
+
+.buttons .btn:nth-child(2) {
+    background-color: #fff;
+    border: 2px solid var(--light-grey);
+    padding: 6px;
+}
+
+.buttons .btn:nth-child(2):hover {
+    background-color: #ececec;
+    padding: 6px;
+}
+
+.buttons .btn:nth-child(3) {
+    background-color: black;
+    padding: 8px;
+}
+
+.buttons .btn:nth-child(3):hover {
+    background-color: var(--deep-grey);
+    padding: 8px;
+}
+
+.div-checkbox {
+    align-self: flex-start;
+}
+
+.checkbox-sign-in {
+    margin: 15px 0 50px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none; 
+}
+
+.checkbox-sign-in input {
+    appearance: none; /*reset default style*/
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--light-grey);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkbox-sign-in input:checked {
+    background-color: var(--red);
+}
+
+.checkbox-sign-in input:checked::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 3px solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin: 4px auto;
+}
+
+.login_button {
+    height: 70px;
+    width: 70px;
+    background-color: var(--red);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login_button i {
+    color: #fff;
+}
+
+.login_button:disabled {
+    background-color: #fff;
+    border: 2px solid var(--light-grey);
+    cursor: default;
+}
+
+.login_button:disabled i {
+    color: var(--light-grey);
+}
+
+.account_version {
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.account_version a {
+    text-decoration: none;
+    color: var(--medium-grey);
+}
+
+.version {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.version span {
+    color: #cccccc;
+    cursor: pointer;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
 }
 
 .wallpaper {

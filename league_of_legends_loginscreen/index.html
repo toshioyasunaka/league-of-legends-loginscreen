@@ -11,47 +11,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="login-screen">
+    <main>
         <section class="login">
-            <img class="logo" src="images/logo.png" alt="Logo League of Legends">
+            <div class="wrapper">
+                <img class="logo" src="images/logo.png" alt="Logo League of Legends">
 
-            <h1>Sign In</h1>
-    
-            <div class="inputs">
-                <label for="username">
-                    <span>Username</span>
-                    <input type="text" name="username" id="username" class="active-span-effect">
-                </label>
+                <h1>Sign in</h1>
         
-                <label for="password">
-                    <span>Password</span>
-                    <input type="text" name="password" id="password" class="active-span-effect" >
-                </label>    
-            </div>
+                <div class="inputs">
+                    <label for="username">
+                        <span>Username</span>
+                        <input type="text" name="username" id="username" class="login_input">
+                    </label>
             
-            <div class="buttons">
-                <button id="facebook" class="btn btn-outline-primary">
-                    <img src="images/facebook-icon.png" alt="Facebook login button">
-                </button>
-                <button id="gmail" class="btn btn-outline-primary">
-                    <img src="images/google-icon.png" alt="Gmail login button">
-                </button>
-                <button id="apple" class="btn btn-outline-primary">
-                    <img src="images/apple-icon.png" alt="Apple login button">
-                </button>
+                    <label for="password">
+                        <span>Password</span>
+                        <input type="password" name="password" id="password" class="login_input">
+                        <div class="visibility-div" onclick="showPassword()">
+                            <i id="visibility-btn" class="fa-solid fa-eye-slash d-none"></i>
+                        </div>
+                    </label>    
+                </div>
+                
+                <div class="buttons">
+                    <button id="facebook" class="btn">
+                        <img src="images/facebook-icon.png" alt="Facebook login button">
+                    </button>
+                    <button id="gmail" class="btn">
+                        <img src="images/google-icon.png" alt="Gmail login button">
+                    </button>
+                    <button id="apple" class="btn">
+                        <img src="images/apple-icon.png" alt="Apple login button">
+                    </button>
+                </div>
+        
+                <div class="div-checkbox">
+                    <label class="checkbox-sign-in" for="stay-signed-in">
+                        <input type="checkbox" id="stay-signed-in">
+                        <span>Stay signed in</span>
+                    </label>
+                </div>
             </div>
-    
-            <label for="stay-signed-in">
-                <input type="checkbox" name="stay_signed_in">
-                <span>Stay Signed In</span>
-            </label>
-    
-            <i class="fa-solid fa-arrow-right"></i>
-    
-            <div>
-                <a href="#">Create acount</a>
-                <a href="#">Can't sign in?</a>
-                <span>v58.0.0</span>
+
+            <div class="wrapper">
+                <button class="login_button" disabled>
+                    <i class="fa-solid fa-arrow-right fa-xl"></i>
+                </button>
+        
+                <div class="account_version">
+                    <a href="https://recovery.riotgames.com/pt-br?region=BR1" target="_blank">Can't sign in?</a>
+                    <div class="version">
+                        <a href="https://signup.leagueoflegends.com/pt-br/signup/index#/" target="_blank">Create acount</a>
+                        <span>v58.0.0</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -61,6 +74,6 @@
         
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    </section>
+    </main>
 </body>
 </html>
